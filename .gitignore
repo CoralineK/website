@@ -7,6 +7,3 @@
 # production
 /build
 /dist
-
-#others
-.prettierrc.json
