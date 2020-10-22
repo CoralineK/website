@@ -1,0 +1,26 @@
+@import 'fonts';
+@import 'reset';
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.halfContainer {
+    width: 100%;
+    height: 50vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: #f7af00;
+    }
+}
+
+@import 'home';
+@import 'about';
+@import 'portfolio';

@@ -1,0 +1,74 @@
+@import 'fonts';
+
+@mixin font {
+    font-family: 'Cairo', sans-serif;
+}
+
+@mixin box {
+    height: 33vh;
+    background-color: #fff8f0;
+    display: flex;
+    width: 100%;
+    h1 {
+        color: #2b2b2b;
+    }
+}
+
+.margin {
+    height: 80px;
+    background-color: #fff8f0;
+}
+
+.title {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        @include font;
+        font-size: 60px;
+        font-weight: 700;
+    }
+}
+
+.text {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10%;
+    article {
+        @include font;
+        font-size: 20px;
+        text-align: justify;
+        line-height: 1.5;
+    }
+}
+
+.describe {
+    @include box;
+    border-radius: 0 0 0 15vh;
+}
+
+.techStack {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 66vh - 80px);
+
+    h1 {
+        color: rgba(244, 43, 3, 0.8);
+    }
+
+    &__icons {
+        width: 60%;
+        margin-right: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.career {
+    @include box;
+    border-radius: 0 15vh 0 0;
+}
