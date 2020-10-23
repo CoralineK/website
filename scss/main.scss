@@ -8,7 +8,11 @@
 
 .halfContainer {
     width: 100%;
-    height: 50vh;
+    min-height: 50vh;
+}
+
+.margin {
+    height: 80px;
 }
 
 a {
@@ -24,3 +28,4 @@ a {
 @import 'home';
 @import 'about';
 @import 'portfolio';
+@import 'hireme';
