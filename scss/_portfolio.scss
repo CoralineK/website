@@ -53,6 +53,12 @@
         .margin {
             height: 0;
         }
+        .textCenter {
+            h1 {
+                @include font;
+                font-size: 35px;
+            }
+        }
     }
 }
 
