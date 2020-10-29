@@ -6,23 +6,33 @@
 
 #hireme {
     background-color: #fff8f0;
-    h1 {
-        color: rgba(244, 43, 3, 0.8);
-    }
-}
 
-.lookfor {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: calc(50vh - 150px);
-    article {
-        padding: 0 calc((100% - 900px) / 2);
-        font-family: 'Cairo', sans-serif;
-        font-size: 20px;
-        text-align: justify;
-        line-height: 1.5;
+    .textCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 30px 0;
+        h1 {
+            @include font;
+            font-size: 50px;
+            font-weight: 700;
+            color: rgba(244, 43, 3, 0.8);
+        }
+    }
+
+    .lookfor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(50vh - 190px);
+        article {
+            padding: 30px 10%;
+            font-family: 'Cairo', sans-serif;
+            font-size: 20px;
+            text-align: justify;
+            line-height: 1.5;
+        }
     }
     .mailContainer {
         @include font;
@@ -30,6 +40,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 30px 0;
         }
         img {
             width: 40px;
@@ -37,6 +48,42 @@
         }
         p {
             font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    #hireme {
+        min-height: unset;
+        .lookfor {
+            height: unset;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #hireme {
+        .textCenter {
+            h1 {
+                text-align: center;
+                font-size: 35px;
+            }
+        }
+        .lookfor {
+            width: 100%;
+            article {
+                font-size: 18px;
+                padding: 0 10%;
+            }
+        }
+        .mailContainer {
+            img {
+                width: 20px;
+                margin: 0 10px;
+            }
+            p {
+                font-size: 16px;
+            }
         }
     }
 }

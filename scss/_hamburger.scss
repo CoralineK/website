@@ -1,0 +1,52 @@
+@mixin menu-bar-position {
+    width: 20px;
+    right: 30px;
+    top: 25px;
+    z-index: 12;
+}
+
+.dropList {
+    display: block;
+    position: fixed;
+    height: 18px;
+    @include menu-bar-position;
+    opacity: 0;
+    z-index: 13;
+
+    &:checked + .bar + .navigation {
+        padding: 10px;
+        .navigation__list {
+            display: flex;
+        }
+    }
+
+    &:checked + .bar {
+        position: fixed;
+    }
+
+    &:checked + .bar span {
+        &:nth-child(3) {
+            display: none;
+        }
+        &:nth-child(2) {
+            transform: rotate(45deg);
+        }
+        &:nth-child(1) {
+            transform: translate(0, 5px) rotate(-45deg);
+        }
+    }
+}
+
+.bar {
+    @include menu-bar-position;
+    position: absolute;
+    span {
+        display: block;
+        height: 2px;
+        background: #f7af00;
+        margin: 3px 0;
+        z-index: 11;
+
+        transition: 0.2s ease-in-out;
+    }
+}
