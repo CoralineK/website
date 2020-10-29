@@ -1,46 +1,106 @@
 #portfolio {
     background-color: #e3e3e3;
-}
 
-.portfolio__color {
-    background-color: #e3e3e3;
-}
+    .portfolio__color {
+        background-color: #e3e3e3;
+    }
 
-.textCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 50px 0;
-    h1 {
-        @include font;
-        font-size: 50px;
-        font-weight: 700;
+    .textCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 30px 0;
+        h1 {
+            @include font;
+            font-size: 50px;
+            font-weight: 700;
+        }
+    }
+
+    .projects {
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        .project {
+            display: flex;
+            width: 300px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                @include font;
+                font-size: 25px;
+                padding: 20px 0;
+            }
+            .project__img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &:hover {
+                .project__img {
+                    opacity: 0.8;
+                }
+            }
+        }
     }
 }
 
-.projects {
-    display: flex;
-    justify-content: center;
-    .project {
-        display: flex;
-        width: 300px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        p {
-            @include font;
-            font-size: 25px;
-            padding: 20px 0;
+@media (max-width: 1024px) {
+    #portfolio {
+        min-height: unset;
+        .margin {
+            height: 0;
         }
-        .project__img {
-            display: flex;
-            justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    #portfolio {
+        .projects {
+            .project {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    #portfolio {
+        .margin {
+            height: 0;
+        }
+        .textCenter {
+            padding: 30px 0;
+            h1 {
+                font-size: 35px;
+            }
+        }
+
+        .projects {
+            flex-direction: column;
             align-items: center;
+            padding-top: 0;
+
+            .project {
+                width: unset;
+                p {
+                    font-size: 20px;
+                }
+            }
         }
-        &:hover {
-            .project__img {
-                opacity: 0.8;
+    }
+}
+
+@media (max-width: 375px) {
+    #portfolio {
+        .textCenter {
+            h1 {
+                text-align: center;
+                font-size: 35px;
             }
         }
     }
